@@ -23,15 +23,15 @@ input{
     
     </div>
 </div>
-	<button onClick="fun()">获得当前值</button>
-	<button onClick="fun2()">设置值</button>
+	<button onClick="getValue()">获得当前值</button>
+	<button onClick="setValue()">设置值</button>
 </body>
 </html>
 
 <script src="jquery-1.8.0.min.js"></script>
 <script src="wUpDown.js"></script>
 <script>
-var w = new wUpDown("#content",{
+var number = new wUpDown("#content",{
 	min:0,
 	max:20,
 	value:2,
@@ -41,10 +41,10 @@ var w = new wUpDown("#content",{
 	readOnly:true,
 	step:1
 });
-function fun(){
-	alert(w.getValue());
+var getValue = function(){
+	alert(number.getValue());
 }
-function fun2(){
-	w.setValue(15);
+var setValue = function(){
+	number.setValue(15);
 }
 </script>
